@@ -1,0 +1,35 @@
+<div class="header header-custom">Angular Weather Application</div>
+  <div ng-controller="WeatherController as vm" class="container">
+  <div id="weekDiv" style="margin-top:20px;">
+    <div class="panel panel-default">
+        <!-- City and Country Information -->
+        <div class="panel-heading">
+            <span></span>
+            <strong>{{vm.data.city.name}}, {{vm.data.city.country}}</strong>
+        </div>
+
+        <!-- Day and Weather Details -->
+        <div class="list-group list-group-custom">
+            <div ng-repeat="w in vm.data.list">
+				<!-- Convert UTC date to user readable date format -->
+                <span class="col-sm-1.5">{{w.dt * 1000 | date : 'dd-MM-yyyy'}}</span>
+                <img title="{{w.weather[0].description}}" ng-src="http://openweathermap.org/img/w/{{w.weather[0].icon}}.png">
+                <span title="Min." class="label label-success">{{w.temp.min}}°C</span>
+                <span title="Max." class="label label-danger">{{w.temp.max}}°C</span>
+				<a href="#{{w.dt}}" title="More Info." data-toggle="collapse"><span class="glyphicon glyphicon-plus"></span></a>
+				<div id={{w.dt}} class="collapse">
+				<ul>
+				<li>Wind: {{w.speed}}m/s</li>
+				<li>Pressure: {{w.pressure}} hpa</li>
+				<li>Humidity: {{w.humidity}}%</li>
+				<li>Day: {{w.temp.day}}°C</li>
+				<li>Evening: {{w.temp.eve}}°C</li>
+				<li>Night: {{w.temp.night}}°C</li>
+				</ul>
+				</div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="footer footer-custom">Created By: Ajay Kango</div>

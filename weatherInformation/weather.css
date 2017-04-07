@@ -1,0 +1,18 @@
+.ui-view-style{
+  background:azure;
+}
+.list-group-custom{
+	background:lemonchiffon;
+	padding-left:15px;
+}
+.header-custom{
+text-align:center;
+font-size:30px;
+color:cornflowerblue;
+}
+.footer-custom{
+text-align:right;
+font-size:15px;
+color:black;
+padding-right:115px;
+}
