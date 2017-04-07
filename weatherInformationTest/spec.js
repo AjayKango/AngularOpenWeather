@@ -11,7 +11,7 @@ describe("Unit: Weather Service", function() {
         }));
 
         it('should contain 5 list items',
-            inject(function(searchService) {
+            inject(function(weatherService) {
 				var numberOfDays = 0;
 				 weatherService.getWeatherDetails().then(function(response){
 					numberOfDays = response.data.list.length;
