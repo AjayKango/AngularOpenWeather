@@ -29,3 +29,8 @@ In case you want to run unit tests you will have to install Karma Jasmine.
 1. Allow user to choose the city for which he wants to see the weather details.
 2. Add tabs containing names of the major cities around the world so that the user does not have to search for that information.
 
+# Application Screenshot
+
+![weatherapplication](https://cloud.githubusercontent.com/assets/26996323/24788756/cea3a39a-1b8c-11e7-97e5-9b828c5dd75c.jpg)
+
+
